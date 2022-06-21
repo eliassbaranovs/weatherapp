@@ -44,13 +44,17 @@ const loopedData = function (data) {
   });
 };
 
+//Get day name
+
+function getDayName(date = new Date(), locale = "en-US") {
+  return date.toLocaleDateString(locale, { weekday: "long" });
+}
+
 //Render weather data
 const renderWeather = function (weatherArr) {
   for (let i = 0; i < weatherArr.forecast.forecastday.length; i++) {
     const dateStr = weatherArr.forecast.forecastday[i].date;
-    function getDayName(date = new Date(), locale = "en-US") {
-      return date.toLocaleDateString(locale, { weekday: "long" });
-    }
+
     forecastWeather.innerHTML += `
 
       <span class="weather-span">
