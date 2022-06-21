@@ -30,7 +30,7 @@ const getWeatherData = function (city) {
 //Loop over fetched data
 const loopedData = function (data) {
   let weatherData = data.forecast;
-  const keys = Object.entries(weatherData).forEach(([key, value]) => {
+  const keys = Object.entries(weatherData).forEach(([value]) => {
     const weatherArr = value;
     return weatherArr;
   });

@@ -168,15 +168,13 @@ input:focus {
     .overall-weather {
         min-width: 50%;
         border-top: none;
+        border-right: 1px solid rgb(20, 33, 61, 0.5);
     }
 
     .current-degrees>img {
         width: 8rem;
     }
 
-    .overall-weather {
-        border-right: 1px solid rgb(20, 33, 61, 0.5);
-    }
 
     .forecast-weather {
         display: flex;
