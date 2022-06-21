@@ -1,14 +1,13 @@
 const currentWeather = document.querySelector(".current-weather");
 const forecastWeather = document.querySelector(".forecast-weather");
 const weatherContainer = document.querySelector(".weather-container");
-let cityName = document.querySelector(".city-name");
 
 //Get value from input field and add active class
-const getValue = function getValue() {
+function getValue() {
   let city = document.getElementById("city").value;
   getWeatherData(city);
   weatherContainer.classList.add("active");
-};
+}
 
 //fetch weather data
 const getWeatherData = function (city) {
