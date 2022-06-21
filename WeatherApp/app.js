@@ -1,6 +1,7 @@
 const currentWeather = document.querySelector(".current-weather");
 const forecastWeather = document.querySelector(".forecast-weather");
 const weatherContainer = document.querySelector(".weather-container");
+const onSubmit = document.getElementById("get-data");
 
 //Get value from input field and add active class
 function getValue() {
@@ -8,6 +9,14 @@ function getValue() {
   getWeatherData(city);
   weatherContainer.classList.add("active");
 }
+
+//On submit
+
+onSubmit.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    getValue();
+  }
+});
 
 //fetch weather data
 const getWeatherData = function (city) {
